@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/tasks_theme.dart';
 
-import 'task_item.dart';
+import '../models/task_item.dart';
 
 class TasksManager extends ChangeNotifier {
   final _tasksItem = <TaskItem>[];

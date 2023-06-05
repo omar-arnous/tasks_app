@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:intl/intl.dart';
-import 'package:tasks/components/task_tile.dart';
 import 'package:uuid/uuid.dart';
 import '../models/models.dart';
 
@@ -111,21 +110,6 @@ class _TaskItemScreenState extends State<TaskItemScreen> {
             const SizedBox(height: 10.0),
             buildColorPicker(context),
             const SizedBox(height: 10.0),
-            TaskTile(
-              item: TaskItem(
-                id: 'PreviewMode',
-                name: _name,
-                importance: _importance,
-                color: _currentColor,
-                date: DateTime(
-                  _dueDate.year,
-                  _dueDate.month,
-                  _dueDate.day,
-                  _timeOfDay.hour,
-                  _timeOfDay.minute,
-                ),
-              ),
-            ),
           ],
         ),
       ),
@@ -144,7 +128,7 @@ class _TaskItemScreenState extends State<TaskItemScreen> {
           controller: _nameController,
           cursorColor: _currentColor,
           decoration: InputDecoration(
-            hintText: 'E.g Buil App',
+            hintText: 'E.g Build App',
             enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.white),
             ),

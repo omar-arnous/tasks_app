@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:tasks/models/models.dart';
 
 import 'screens/task_screen.dart';
 
@@ -19,6 +21,21 @@ class HomeState extends State<Home> {
           'Tasks',
           style: Theme.of(context).textTheme.titleLarge,
         ),
+        // actions: [
+        //   Padding(
+        //     padding: const EdgeInsets.only(right: 10),
+        //     child: IconButton(
+        //       icon: manager.isDark
+        //           ? const Icon(
+        //               Icons.light_mode_outlined,
+        //             )
+        //           : const Icon(
+        //               Icons.dark_mode_outlined,
+        //             ),
+        //       onPressed: () => manager.changeThemeMode(),
+        //     ),
+        //   ),
+        // ],
       ),
       body: const TaskScreen(),
     );

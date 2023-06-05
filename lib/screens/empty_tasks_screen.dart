@@ -22,7 +22,7 @@ class EmptyTasksScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16.0),
           const Text(
-            'Looking fo tasks?\n' 'Tap the + button to write them down!',
+            'Looking for tasks?\n' 'Tap the + button to write them down!',
             textAlign: TextAlign.center,
           ),
         ],
