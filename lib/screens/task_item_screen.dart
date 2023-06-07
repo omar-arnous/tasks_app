@@ -224,7 +224,7 @@ class _TaskItemScreenState extends State<TaskItemScreen> {
             ),
           ],
         ),
-        Text('${DateFormat('dd-MM-yyyy').format(_dueDate)}'),
+        Text(DateFormat('dd-MM-yyyy').format(_dueDate)),
       ],
     );
   }
@@ -256,7 +256,7 @@ class _TaskItemScreenState extends State<TaskItemScreen> {
             ),
           ],
         ),
-        Text('${_timeOfDay.format(context)}'),
+        Text(_timeOfDay.format(context)),
       ],
     );
   }

@@ -10,7 +10,7 @@ class CacheStorage {
     return _prefs;
   }
 
-  static Future<bool> setMode(bool isDark) async =>
+  static Future<bool> changeMode(bool isDark) async =>
       await _prefs.setBool(_key, isDark);
 
   static bool getMode() => _prefs.getBool(_key) ?? false;

@@ -14,6 +14,7 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    final manager = Provider.of<TasksManager>(context);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -21,21 +22,21 @@ class HomeState extends State<Home> {
           'Tasks',
           style: Theme.of(context).textTheme.titleLarge,
         ),
-        // actions: [
-        //   Padding(
-        //     padding: const EdgeInsets.only(right: 10),
-        //     child: IconButton(
-        //       icon: manager.isDark
-        //           ? const Icon(
-        //               Icons.light_mode_outlined,
-        //             )
-        //           : const Icon(
-        //               Icons.dark_mode_outlined,
-        //             ),
-        //       onPressed: () => manager.changeThemeMode(),
-        //     ),
-        //   ),
-        // ],
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: IconButton(
+              icon: manager.isDark
+                  ? const Icon(
+                      Icons.light_mode_outlined,
+                    )
+                  : const Icon(
+                      Icons.dark_mode_outlined,
+                    ),
+              onPressed: () => manager.toggleTheme(context),
+            ),
+          ),
+        ],
       ),
       body: const TaskScreen(),
     );

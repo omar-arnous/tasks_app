@@ -18,7 +18,6 @@ class Tasks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = CacheStorage.getMode();
-    print(isDark);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: isDark ? TasksTheme.dark() : TasksTheme.light(),
