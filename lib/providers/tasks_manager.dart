@@ -5,11 +5,11 @@ import 'package:tasks/utils/cahce_storage.dart';
 import '../models/task_item.dart';
 
 class TasksManager extends ChangeNotifier {
-  final _tasksItem = <TaskItem>[];
+  static final _tasksItem = <TaskItem>[];
   bool _mode = CacheStorage.getMode();
 
   bool get isDark => _mode;
-  List<TaskItem> get tasksItems => List.unmodifiable(_tasksItem);
+  List<TaskItem> get tasksItems => _tasksItem;
 
   void deleteItem(int index) {
     _tasksItem.removeAt(index);
